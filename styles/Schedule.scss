@@ -1,0 +1,136 @@
+@import "react-big-calendar/lib/sass/styles";
+@import "react-big-calendar/lib/addons/dragAndDrop/styles"; // if using DnD
+
+/* peoples colors */
+.rbc-event {
+  &.james,
+  &.james.rbc-selected {
+    background: #111;
+  }
+  &.holly,
+  &.holly.rbc-selected {
+    background: #4f1665;
+  }
+  &.matt,
+  &.matt.rbc-selected {
+    background: rgb(174, 35, 14);
+  }
+  &.jackson,
+  &.jackson.rbc-selected,
+  &.jax,
+  &.jax.rbc-selected {
+    background: rgb(25, 98, 49);
+  }
+  &.blake,
+  &.blake.rbc-selected {
+    background: #002c8e;
+  }
+  &.cole,
+  &.cole.rbc-selected {
+    // background: #0081ff;
+    background: #0066ca;
+  }
+  &.kat,
+  &.kat.rbc-selected {
+    background: #d07472;
+    color: #222;
+  }
+  &.tyler,
+  &.tyler.rbc-selected {
+    // background: #aa4cd9;
+    background: #8f41b7;
+  }
+  &.riley,
+  &.riley.rbc-selected {
+    background: rgb(159, 159, 159);
+    color: #222;
+  }
+}
+
+main#schedule {
+  max-width: 2000px;
+  margin: 40px auto;
+  box-shadow: 0px 0px 5px 2px #333;
+  background: #222;
+
+  .rbc-calendar {
+    min-height: 1000px;
+    max-width: 1800px;
+    padding: 60px 40px;
+    margin: auto;
+
+    .rbc-toolbar {
+      font-size: 24px;
+
+      button {
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &.rbc-active {
+          background: #e37200;
+          color: #222;
+        }
+
+        &:hover,
+        &:focus {
+          background: #f9c28a;
+          color: #222;
+        }
+      }
+    }
+
+    .rbc-month-view {
+      .rbc-header {
+        padding: 8px 3px;
+        font-size: 20px;
+      }
+      .rbc-date-cell button {
+        font-size: 18px;
+        padding: 8px 4px;
+      }
+      .rbc-today {
+        background: #e37200;
+      }
+      .rbc-date-cell.rbc-now button {
+        font-weight: bold;
+        background: #e37200;
+        color: #222;
+      }
+
+      border-width: 2px;
+
+      .rbc-day-bg + .rbc-day-bg,
+      .rbc-month-row + .rbc-month-row {
+        border-width: 2px;
+      }
+    }
+
+    .rbc-date-cell.rbc-off-range button {
+      background: #e6e6e6;
+      color: #222;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 800px) {
+      min-height: 800px;
+      padding: 30px 20px;
+
+      .rbc-toolbar {
+        justify-content: space-between;
+
+        .rbc-toolbar-label {
+          order: 1;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .rbc-btn-group {
+          order: 2;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+main#the-crew {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px 0;
+  box-shadow: 0px 0px 5px 2px #333;
+  background: #222;
+
+  .crew-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
+
+    a {
+      display: block;
+      text-transform: capitalize;
+      width: fit-content;
+      padding: 10px 20px;
+      margin: 20px;
+      text-align: center;
+      font-size: 24px;
+
+      .tile-img {
+        width: 150px;
+        height: 150px;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+}
