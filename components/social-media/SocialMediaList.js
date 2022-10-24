@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter, faInstagram, faTwitch, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faInstagram, faTwitch, faYoutube, faBandcamp } from '@fortawesome/free-brands-svg-icons'
 
 const medias = {
   "Instagram": {
@@ -18,6 +18,9 @@ const medias = {
     "domain": "https://youtube.com/",
     "icon": faYoutube
   },
+  "Bandcamp": {
+    "icon": faBandcamp,
+  },
 }
 
 const SocialMediaList = (props) => {
@@ -25,7 +28,7 @@ const SocialMediaList = (props) => {
 
   Object.keys(medias).forEach(key => {
     if (props.data[key.toLowerCase()]) {
-      const href = `${medias[key.replace('2nd ', '')]["domain"]}${props.data[key.toLocaleLowerCase()]}`
+      const href = key !== 'Bandcamp' ? `${medias[key.replace('2nd ', '')]["domain"]}${props.data[key.toLowerCase()]}` : `https://${props.data[key.toLowerCase()]}.bandcamp.com/music`
 
       urls.push({
         name: key,
