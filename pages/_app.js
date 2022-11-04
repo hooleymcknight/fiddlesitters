@@ -5,6 +5,7 @@ import '../styles/Schedule.scss'
 import '../styles/SocialMedia.scss'
 import '../styles/Wiki.scss'
 
+import '../styles/sfmm.scss'
 import '../styles/Home.scss'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'

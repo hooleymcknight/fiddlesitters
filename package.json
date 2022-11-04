@@ -4,26 +4,39 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "export": "next export"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "config.json": "^0.0.4",
+    "configparser": "^0.3.10",
+    "fs": "^0.0.1-security",
+    "mysql2": "^2.3.3",
+    "net": "^1.0.2",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-big-calendar": "^1.5.0",
     "react-dom": "18.2.0",
     "react-router-dom": "^6.4.2",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "serverless-mysql": "^1.5.4",
+    "tls": "^0.0.1"
   },
   "devDependencies": {
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }
