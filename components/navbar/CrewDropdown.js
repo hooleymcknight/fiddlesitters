@@ -11,6 +11,7 @@ const CrewDropdown = (props) => {
       <li role="menuitem"><Link href="/the-crew/kat"><a onClick={props.onClick}>Kat</a></Link></li>
       <li role="menuitem"><Link href="/the-crew/riley"><a onClick={props.onClick}>Riley</a></Link></li>
       <li role="menuitem"><Link href="/the-crew/cole"><a onClick={props.onClick}>Cole</a></Link></li>
+      <li role="menuitem"><Link href="/the-crew/tyler"><a onClick={props.onClick}>Tyler</a></Link></li>
     </ul>
   )
 }

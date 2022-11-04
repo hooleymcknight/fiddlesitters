@@ -47,6 +47,9 @@ main#crew-member {
           &[data-section="twitch"] {
             background: #5c2ea0;
           }
+          &[data-section="bandcamp"] {
+            background: #853939;
+          }
         }
 
         .bio-line {
