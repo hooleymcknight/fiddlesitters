@@ -2,6 +2,9 @@ import { useEffect } from 'react'
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 
+import RecentYT from '../components/media-content/RecentYT'
+import RecentTwitch from '../components/media-content/RecentTwitch'
+
 import logo from '../public/logo.png'
 
 const Home = () => {
@@ -18,6 +21,10 @@ const Home = () => {
           <p>
             Fiddlesitters!
           </p>
+
+          <RecentYT member="holly"/>
+          <RecentTwitch member="holly"/>
+
         </header>
       </div>
 
