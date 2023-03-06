@@ -6,6 +6,17 @@ import RecentYT from '../components/media-content/RecentYT'
 import RecentTwitch from '../components/media-content/RecentTwitch'
 
 import logo from '../public/logo.png'
+import RecentVideo from '../components/media-content/RecentVideo'
+
+// members and the channels they wish to boost on the FS site
+const members = {
+  'holly': ['yt', 'twitch'],
+  'matt': ['twitch'],
+  'james': ['twitch', 'yt'],
+  'jackson': ['twitch', 'yt'],
+  'blake': ['twitch', 'yt'],
+  'kat': ['twitch']
+}
 
 const Home = () => {
 
@@ -22,8 +33,11 @@ const Home = () => {
             Fiddlesitters!
           </p>
 
-          <RecentYT member="holly"/>
-          <RecentTwitch member="holly"/>
+          {Object.keys(members).map(key =>
+            members[key].map(videoType => 
+              <RecentVideo type={videoType} member={key} />
+            )
+          )}
 
         </header>
       </div>
