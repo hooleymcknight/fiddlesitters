@@ -21,6 +21,35 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
+  .headline-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 80%;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    img {
+      width: 250px;
+      height: auto;
+    }
+
+    .index-headline {
+      line-height: 1;
+      margin-bottom: 0;
+      text-align: left;
+      width: auto;
+    }
+  
+    .index-subheadline {
+      text-align: left;
+      width: auto;
+    }
+  }
 }
 
 .section-tab {
@@ -54,7 +83,7 @@
     display: flex;
 
   .yt-video-list {
-    width: calc(100% - 220px);
+    width: calc(100% - 180px);
     margin: 20px auto 20px 0;
     display: flex;
     align-items: center;
@@ -76,10 +105,23 @@
 }
 
 .recent-twitch {
-  iframe {
-    margin: 10px;
-    border: none;
-    width: 600px;
-    height: 300px;
+  .twitch-video-list {
+    width: calc(100% - 180px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: scroll;
+
+    iframe {
+      margin: 10px;
+      border: none;
+      width: 600px;
+      height: 300px;
+      min-width: 600px;
+    }
+
+    @media (min-width: 1450px) {
+      overflow-x: visible;
+    }
   }
 }

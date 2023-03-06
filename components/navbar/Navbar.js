@@ -2,6 +2,7 @@
 import { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link'
 
 import NavItem from './NavItem'
@@ -138,6 +139,7 @@ const Navbar = ({ page }) => {
           <NavItem onClick={e => closeMenu(e)} link="/schedule" name="Schedule" />
           <NavItem onClick={e => closeMenu(e)} link="/social-media" name="Social Media" />
           <NavItem onClick={e => closeMenu(e)} link="/the-crew" name="The Crew" dropdown={<CrewDropdown onClick={e => closeMenu(e)} />} aria-controls="nav-crew-list" />
+          <NavItem onClick={e => closeMenu(e)} link="https://discord.gg/8MYDjz5" name="Fiddlesitters Discord" icon='true' />
         </ul>
       </nav>
     </div>

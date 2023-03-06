@@ -1,21 +1,17 @@
-import { useEffect } from 'react'
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
-
-import RecentYT from '../components/media-content/RecentYT'
-import RecentTwitch from '../components/media-content/RecentTwitch'
 
 import logo from '../public/logo.png'
 import RecentVideo from '../components/media-content/RecentVideo'
 
 // members and the channels they wish to boost on the FS site
 const members = {
-  'holly': ['yt', 'twitch'],
-  'matt': ['twitch'],
   'james': ['twitch', 'yt'],
+  'matt': ['twitch'],
+  'holly': ['yt', 'twitch'],
   'jackson': ['twitch', 'yt'],
+  'kat': ['twitch'],
   'blake': ['twitch', 'yt'],
-  'kat': ['twitch']
 }
 
 const Home = () => {
@@ -28,10 +24,13 @@ const Home = () => {
 
       <div className="App">
         <header className="App-header">
-          <img src={logo.src} className="App-logo" alt="Fiddlesitters logo, a classic-style ship on the sea" />
-          <p>
-            Fiddlesitters!
-          </p>
+          <div className="headline-content">
+            <img src={logo.src} className="App-logo" alt="Fiddlesitters logo, a classic-style ship on the sea" />
+            <div className="headline-text">
+              <h1 className="index-headline">Ahoy, fiddlers and sitters!</h1>
+              <p className="index-subheadline">We are a crew of friends who game together and sometimes post videos of it. Check out our team's content&nbsp;below.</p>
+            </div>
+          </div>
 
           {Object.keys(members).map(key =>
             members[key].map(videoType => 

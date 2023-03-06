@@ -38,8 +38,10 @@ function RecentTwitch(props) {
           <p>{props.member}</p>
         </div>
 
-        <iframe src={`https://player.twitch.tv/?channel=${channelId}&parent=fiddlesitters.com&parent=localhost&parent=fiddlesitters.com&autoplay=false`} allowFullScreen></iframe>
-        <iframe src={`https://player.twitch.tv/?collection=${collectionId}&parent=fiddlesitters.com&parent=localhost&parent=fiddlesitters.com&autoplay=false`} allowFullScreen></iframe>
+        <div className="twitch-video-list">
+          <iframe src={`https://player.twitch.tv/?channel=${channelId}&parent=fiddlesitters.com&parent=localhost&parent=fiddlesitters.com&autoplay=false`} allowFullScreen></iframe>
+          <iframe src={`https://player.twitch.tv/?collection=${collectionId}&parent=fiddlesitters.com&parent=localhost&parent=fiddlesitters.com&autoplay=false`} allowFullScreen></iframe>
+        </div>
       </div>
       : ''
     }
