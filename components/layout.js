@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-sync-scripts */
 /* eslint-disable @next/next/no-page-custom-font */
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect } from 'react'
 import Navbar from '../components/navbar/Navbar'
 import CharacterCard from '../murder-mystery/Card'
@@ -27,7 +25,7 @@ const Layout = ({ children, page, member }) => {
         />
         <meta
           property="og:image"
-          content={``} // image
+          content={`https://fiddlesitters.com/logo192.png`} // image
         />
         <meta name="og:title" content="One brain cell plays video games" />
         <meta name="twitter:card" content="summary_large_image" />

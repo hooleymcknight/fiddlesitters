@@ -93,8 +93,8 @@
           }
 
           ul.dropdown {
-            // position: absolute;
-            // top: 100%;
+            position: absolute;
+            top: 100%;
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
@@ -165,6 +165,9 @@
           }
 
           &.has-dropdown ul.dropdown {
+              position: relative;
+              top: auto;
+
             li {
               border-bottom: 1px solid #ededed;
               height: auto;

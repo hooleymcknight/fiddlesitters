@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'

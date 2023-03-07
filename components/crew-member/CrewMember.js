@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-
 import BioStats from './layouts/BioStats'
 import TopSummary from './layouts/TopSummary'
 import TableOfContents from './layouts/TableOfContents'

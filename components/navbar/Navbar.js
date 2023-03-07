@@ -2,7 +2,6 @@
 import { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
-import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link'
 
 import NavItem from './NavItem'
@@ -24,7 +23,7 @@ const mobileMenuHandler = (e) => {
 }
 
 const closeMenu = (e) => {
-  if (!e.target.closest('[href="/the-crew"]:not(.crew-opened)')) {
+  if (!e.target.closest('[href="/the-crew/"]:not(.crew-opened)')) {
     const doc = e.target.closest('html')
     document.querySelector('.mobile-menu-btn').classList.remove('menu-open')
     doc.classList.remove('menu-open')
@@ -35,7 +34,7 @@ const closeMenu = (e) => {
     }
   }
   else {
-    e.target.closest('[href="/the-crew"]').classList.add('crew-opened')
+    e.target.closest('[href="/the-crew/"]').classList.add('crew-opened')
   }
 }
 

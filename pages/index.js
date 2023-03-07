@@ -2,12 +2,13 @@ import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 
 import logo from '../public/logo.png'
-import RecentVideo from '../components/media-content/RecentVideo'
+import RecentMedia from '../components/media-content/RecentMedia'
 
 // members and the channels they wish to boost on the FS site
 const members = {
   'james': ['twitch', 'yt'],
   'matt': ['twitch'],
+  'tyler': ['bandcamp'],
   'holly': ['yt', 'twitch'],
   'jackson': ['twitch', 'yt'],
   'kat': ['twitch'],
@@ -33,8 +34,8 @@ const Home = () => {
           </div>
 
           {Object.keys(members).map(key =>
-            members[key].map(videoType => 
-              <RecentVideo type={videoType} member={key} />
+            members[key].map(videoType =>
+              <RecentMedia key={`${key}-${videoType}`} type={videoType} member={key} />
             )
           )}
 
