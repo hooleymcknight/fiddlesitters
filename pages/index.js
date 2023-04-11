@@ -8,7 +8,7 @@ import RecentMedia from '../components/media-content/RecentMedia'
 const members = {
   'james': ['twitch', 'yt'],
   'matt': ['twitch'],
-  'tyler': ['bandcamp'],
+  'heather': ['bandcamp'],
   'holly': ['yt', 'twitch'],
   'jackson': ['twitch', 'yt'],
   'kat': ['twitch'],

@@ -3,18 +3,18 @@ import Head from 'next/head'
 import Layout, {siteTitle} from '../../components/layout'
 import CrewMember from '../../components/crew-member/CrewMember'
 
-const Tyler = () => {
+const Heather = () => {
 
   return (
     <Layout page="crew-member">
       <Head>
-        <title>{siteTitle} || Tyler</title>
+        <title>{siteTitle} || Heather</title>
       </Head>
 
-      <CrewMember member="tyler" />
+      <CrewMember member="heather" />
 
     </Layout>
   )
 }
 
-export default Tyler
+export default Heather

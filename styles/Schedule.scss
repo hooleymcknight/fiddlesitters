@@ -25,24 +25,24 @@
   &.blake.rbc-selected {
     background: #002c8e;
   }
-  &.cole,
-  &.cole.rbc-selected {
-    // background: #0081ff;
-    background: #0066ca;
-  }
   &.kat,
   &.kat.rbc-selected {
     background: #d07472;
     color: #222;
   }
-  &.tyler,
-  &.tyler.rbc-selected {
+  &.heather,
+  &.heather.rbc-selected {
     // background: #aa4cd9;
     background: #8f41b7;
   }
   &.riley,
   &.riley.rbc-selected {
     background: rgb(159, 159, 159);
+    color: #222;
+  }
+  &.selena,
+  &.selena.rbc-selected {
+    background:rgb(250, 250, 0);
     color: #222;
   }
 }

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const members = [
-  'Jackson', 'James', 'Blake', 'Holly', 'Matt', 'Kat', 'Riley', 'Tyler', 'Selena'
+  'Jackson', 'James', 'Blake', 'Holly', 'Matt', 'Kat', 'Riley', 'Heather', 'Selena'
 ]
 
 const CrewDropdown = (props) => {
