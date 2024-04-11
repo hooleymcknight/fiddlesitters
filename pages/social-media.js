@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Layout, {siteTitle} from '../components/layout'
 
 import SocialMediaList from '../components/social-media/SocialMediaList'
-import mediaAccounts from '../data/media_accounts.json'
+import data from '../data/member_data.json'
 
 const SocialMedia = () => {
 
@@ -13,8 +13,8 @@ const SocialMedia = () => {
       <title>{siteTitle + ' || Social Media'}</title>
       </Head>
       <div className="social-media-section">
-        {Object.keys(mediaAccounts).map(key =>
-          <SocialMediaList key={key} crewmate={key} data={mediaAccounts[key]} />
+        {Object.keys(data).map(x => `${x.charAt(0).toUpperCase()}${x.slice(1, x.length)}`).map(key =>
+          <SocialMediaList key={key} crewmate={key} data={data[key.toLowerCase()]} />
         )}
       </div>
     </Layout>

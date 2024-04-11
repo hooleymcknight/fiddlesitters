@@ -2,50 +2,58 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faInstagram, faTwitch, faYoutube, faBandcamp } from '@fortawesome/free-brands-svg-icons'
 
 const medias = {
-  "Instagram": {
+  "instagram": {
     "domain": "https://instagram.com/",
     "icon": faInstagram,
   },
-  "Twitch": {
+  "twitch": {
     "domain": "https://twitch.tv/",
     "icon": faTwitch,
   },
-  "Twitter": {
+  "twitter": {
     "domain": "https://twitter.com/",
     "icon": faTwitter,
   },
-  "YouTube": {
+  "youtube": {
     "domain": "https://youtube.com/",
     "icon": faYoutube
   },
-  "Bandcamp": {
+  "bandcamp": {
+    "domain": "bandcamp",
     "icon": faBandcamp,
   },
-}
+};
 
 const SocialMediaList = (props) => {
-  let urls = []
+  let urls = [];
+  const socialMedia = props.data['social_media'];
 
-  Object.keys(medias).forEach(key => {
-    if (props.data[key.toLowerCase()]) {
-      const href = key !== 'Bandcamp' ? `${medias[key.replace('2nd ', '')]["domain"]}${props.data[key.toLowerCase()]}` : `https://${props.data[key.toLowerCase()]}.bandcamp.com/music`
+  Object.keys(socialMedia).forEach(platform => {
+    if (!medias[platform]) return;
+    const href = platform !== 'bandcamp' ? `${medias[platform]['domain']}${socialMedia[platform]}` : `https://${socialMedia.bandcamp}.bandcamp.com/music`;
 
-      urls.push({
-        name: key,
-        href: href,
-        faClass: medias[key]["icon"]
-      })
-    }
-  })
+    urls.push({
+      name: platform,
+      href: href,
+      faClass: medias[platform]["icon"]
+    });
+  });
 
   return (
-    <div className="social-media-listing">
-      <h2>{props.crewmate}</h2>
-      {urls.map((url) =>
-        <a key={url.name} href={url.href} target="_blank" alt={url.name} rel="noreferrer"><FontAwesomeIcon icon={url.faClass} /><span>{url.name}</span></a>
-      )}
-    </div>
-  )
+    <>
+      { Object.keys(socialMedia).length === 0
+        ?
+        <></>
+        :
+        <div className="social-media-listing">
+          <h2>{props.crewmate}</h2>
+          {urls.map((url) =>
+            <a key={url.name} href={url.href} target="_blank" alt={url.name} rel="noreferrer"><FontAwesomeIcon icon={url.faClass} /></a>
+          )}
+        </div>
+      }
+    </>
+  );
 }
 
-export default SocialMediaList
+export default SocialMediaList;
