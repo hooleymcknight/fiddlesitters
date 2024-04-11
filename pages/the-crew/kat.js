@@ -8,7 +8,7 @@ const Kat = () => {
   return (
     <Layout page="crew-member">
       <Head>
-        <title>{siteTitle} || Kat</title>
+        <title>{siteTitle + ' || Kat'}</title>
       </Head>
 
       <CrewMember member="kat" />

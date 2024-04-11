@@ -33,7 +33,7 @@ const Schedule = (props) => {
   return (
     <Layout page='schedule'>
       <Head>
-        <title>{siteTitle} || Schedule</title>
+        <title>{siteTitle + ' || Schedule'}</title>
       </Head>
       <Calendar
         localizer={localizer}

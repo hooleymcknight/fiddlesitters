@@ -10,7 +10,7 @@ const SocialMedia = () => {
   return (
     <Layout page='social-media'>
       <Head>
-        <title>{siteTitle} || Social Media</title>
+      <title>{siteTitle + ' || Social Media'}</title>
       </Head>
       <div className="social-media-section">
         {Object.keys(mediaAccounts).map(key =>

@@ -9,7 +9,7 @@ const Crew = () => {
   return (
     <Layout page='the-crew'>
       <Head>
-        <title>{siteTitle} || The Crew</title>
+      <title>{siteTitle + ' || The Crew'}</title>
       </Head>
 
       <div className="crew-list">

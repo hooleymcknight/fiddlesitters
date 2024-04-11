@@ -8,7 +8,7 @@ const Selena = () => {
   return (
     <Layout page="crew-member">
       <Head>
-        <title>{siteTitle} || Selena</title>
+        <title>{siteTitle + ' || Selena'}</title>
       </Head>
 
       <CrewMember member="selena" />

@@ -6,7 +6,6 @@ import RecentMedia from '../components/media-content/RecentMedia'
 
 // members and the channels they wish to boost on the FS site
 const members = {
-  'james': ['twitch', 'yt'],
   'matt': ['twitch'],
   'heather': ['bandcamp'],
   'holly': ['yt', 'twitch'],
@@ -20,7 +19,7 @@ const Home = () => {
   return (
     <Layout page='home'>
       <Head>
-        <title>{siteTitle} || Home</title>
+      <title>{siteTitle + ' || Home'}</title>
       </Head>
 
       <div className="App">

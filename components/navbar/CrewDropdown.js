@@ -1,8 +1,7 @@
 import Link from 'next/link'
+import data from '../../data/member_data.json'
 
-const members = [
-  'Jackson', 'James', 'Blake', 'Holly', 'Matt', 'Kat', 'Riley', 'Heather', 'Selena'
-]
+const members = Object.keys(data).map(x => `${x.charAt(0).toUpperCase()}${x.slice(1, x.length)}`)
 
 const CrewDropdown = (props) => {
   return (
